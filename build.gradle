@@ -1,0 +1,35 @@
+plugins {
+    id 'org.springframework.boot' version '3.2.1'
+    id 'io.spring.dependency-management' version '1.1.4'
+    id 'java'
+}
+
+group = 'kz.dair'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Spring Boot WebFlux для асинхронных запросов
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'
+
+    // Lombok (убирает бойлерплейт-код)
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    // JSON обработка
+    implementation 'com.fasterxml.jackson.core:jackson-databind'
+
+    // Планировщик задач
+    implementation 'org.springframework.boot:spring-boot-starter'
+
+    // Тестирование
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}

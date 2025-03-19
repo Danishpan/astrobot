@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: astrobot
+
+groq:
+  api:
+    key: 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
+    url: https://api.groq.com/openai/v1/chat/completions
+
+threads:
+  api:
+    token: THAASVVRxwssBBYlZASNTRVZAWptMGxyWDktckxUbW43RkZAsTkRMZAGVsMXBnN2hBRlJWODJ1RkZAhNU1nMzctY2pLcXlUNzl0LWpZATGlsNEZAGYzNtdkZAzdUZAVOEU4UkJVYUhlbGpydHN3WFl2aXVib1FnQV9lTGNrM2owWGg1YVppeDIwdwZDZD
+    user_id: 9230925080367058
+
