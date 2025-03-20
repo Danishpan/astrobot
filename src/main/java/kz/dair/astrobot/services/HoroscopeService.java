@@ -5,8 +5,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
-import org.springframework.web.reactive.function.client.WebClient;
-import reactor.core.publisher.Mono;
 
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -59,7 +57,7 @@ public class HoroscopeService {
             String requestBody = objectMapper.writeValueAsString(Map.of(
                     "model", "llama-3.3-70b-specdec",
                     "messages", List.of(Map.of("role", "user", "content", PROMPT)),
-                    "max_tokens", 150
+                    "max_tokens", 2000
             ));
 
             // Build HTTP request
