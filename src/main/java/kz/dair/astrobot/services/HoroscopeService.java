@@ -57,7 +57,9 @@ public class HoroscopeService {
             String requestBody = objectMapper.writeValueAsString(Map.of(
                     "model", "llama-3.3-70b-specdec",
                     "messages", List.of(Map.of("role", "user", "content", PROMPT)),
-                    "max_tokens", 2000
+                    "max_completion_tokens", 1024,
+                    "temperature", 1,
+                    "top_p", 1
             ));
 
             // Build HTTP request
